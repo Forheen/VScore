@@ -15,6 +15,12 @@
         <activity
             android:name=".SignUp.ui.SignUp"
             android:exported="true">
+
+
+        </activity>
+        <activity
+            android:name=".Organizer.ui.Home"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

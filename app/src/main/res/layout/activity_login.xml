@@ -4,143 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Login.ui.LoginActivity"
+        android:orientation="vertical"
+
+        android:padding="25dp"
         android:background="@drawable/signin_img_back">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_Welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Welcome to "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_vscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="VScore "
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/welcomeTV"
+            android:id="@+id/txt_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to "
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textSize="20sp"
-            android:layout_marginTop="40dp"
-            android:layout_marginStart="40dp"/>
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:text="VScore "
-            android:textColor="@color/blue"
-            android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@id/welcomeTV"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/averia_serif_libre_light"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="4"
             android:text="Sign in"
             android:textColor="@color/black"
-            android:textSize="40sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomeTV" />
-
+            android:textSize="32sp" />
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/edt_username"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="80dp"
-            android:textColorHint="@color/black"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+
+            android:layout_gravity="center"
+            android:textColorHint="@color/gray"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/password"
             android:background="@drawable/edit_text_back"
             android:paddingHorizontal="10dp"
-            android:hint="Email"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+            android:hint="Username" />
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/hide"
+
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+
             android:background="@drawable/edit_text_back"
+            android:paddingHorizontal="10dp"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingHorizontal="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"
-            app:layout_constraintBottom_toTopOf="@id/signInBtn"/>
-
-        <TextView
-            android:id="@+id/signInBtn"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/button_back"
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:gravity="center"
-            android:paddingHorizontal="10dp"
-            android:text="Sign in"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            android:inputType="textPassword" />
         <TextView
             android:id="@+id/forgotPasswordBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:paddingHorizontal="10dp"
-            android:text="Forgot Password?"
+            android:text="Forgot Password"
             android:textColor="@color/blue"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            android:textSize="12sp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp" />
         <TextView
-            android:id="@+id/signUpTV"
+            android:id="@+id/signInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/button_back"
+            android:paddingHorizontal="10dp"
+            android:text="Sign in"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center" />
+        <View android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    <LinearLayout
+        android:layout_gravity="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_newhere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center"
+android:layout_marginTop="10dp"
             android:text="New Here?"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/signInBtn" />
+            android:textSize="14sp"
+            android:textColor="@color/black" />
         <TextView
             android:id="@+id/signUpBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:paddingHorizontal="10dp"
-            android:text="Sign Up"
-            android:textColor="@color/blue"
-            android:textSize="18sp"
-            android:fontFamily="@font/averia_serif_libre_light"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/signUpTV"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_gravity="center"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="Sign Up"
+            android:textSize="14sp"
+            android:textColor="@color/blue"/>
+    </LinearLayout>
+        <View android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+<!--        <ImageView-->
+<!--            android:layout_gravity="center"-->
+
+<!--            android:id="@+id/img_volleyball"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:src="@drawable/volleyball"-->
+<!--            android:gravity="bottom"-->
+
+<!--            />-->
+    </LinearLayout>
+
 </layout>

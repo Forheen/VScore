@@ -13,5 +13,6 @@
     <color name="button_blue">#FF35B6FE</color>
     <color name="button_yellow">#FFFFDE59</color>
     <color name="card_pink">#33E36B6B</color>
+    <color name="transparent_blue">#5518ACFE</color>
 
 </resources>
