@@ -5,11 +5,11 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitUtilClass {
+class RetrofitUtil {
     companion object {
         private lateinit var retrofit: Retrofit
 
-        val API_BASE_URL_PROD = "Url will be here"
+        val API_BASE_URL_PROD = "http://192.168.43.20:4000/api/v1/"
 
 
         fun getRetrofit(token: String? = null): Retrofit {
