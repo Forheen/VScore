@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context=".Login.ui.LoginActivity"
-    android:background="@drawable/background1">
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background1"
+        tools:context=".Login.ui.LoginActivity">
 
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-
-
+            android:layout_gravity="center"
             android:orientation="vertical">
-    <!-- First button -->
-    <Button
+            <!-- First button -->
+            <Button
 
-        android:id="@+id/btn_organizer"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="20dp"
-        android:padding="20dp"
-        android:text="Oragnizer"
+                android:id="@+id/btn_organizer"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_button_blue"
+                android:padding="20dp"
 
-        android:textColor="@android:color/white"
-        android:background="@drawable/rounded_button_blue"
-        android:layout_marginBottom="10dp"
-           />
+                android:text="Oragnizer"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
 
-    <!-- Second button -->
-    <Button
-        android:id="@+id/btn_team"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Team"
-        android:textSize="20dp"
-        android:padding="20dp"
+            <!-- Second button -->
+            <Button
+                android:id="@+id/btn_team"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button_yellow"
 
-        android:background="@drawable/rounded_button_yellow"
-        android:textColor="@android:color/black"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-       />
+                android:padding="20dp"
+                android:text="Team"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
         </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
