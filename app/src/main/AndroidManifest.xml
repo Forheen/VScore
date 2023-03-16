@@ -26,7 +26,14 @@
         <activity
             android:name=".Login.ui.LoginActivity"
             android:exported="true"
-            />
+
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Organizer.ui.RoomCreate"
             android:exported="true"
@@ -35,11 +42,7 @@
             android:name=".Room.ui.Dashboard"
             android:screenOrientation="landscape"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity
