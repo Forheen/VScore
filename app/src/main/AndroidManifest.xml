@@ -18,8 +18,18 @@
 
 
         </activity>
+
         <activity
             android:name=".Organizer.ui.Home"
+            android:exported="true"
+            />
+        <activity
+            android:name=".Organizer.ui.RoomCreate"
+            android:exported="true"
+        />
+        <activity
+            android:name=".Room.ui.Dashboard"
+            android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

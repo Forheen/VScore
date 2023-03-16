@@ -1,0 +1,203 @@
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+  android:id="@+id/layout_player_score"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+        android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/player_score1"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="1"
+                android:padding="5dp"
+
+                android:background="@color/off_white"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/player_name1"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/pale_green"
+                android:padding="5dp"
+                android:text="Yusuf Ali"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/player_score2"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="2"
+                android:padding="5dp"
+
+                android:background="@color/off_white"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/player_name2"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/pale_green"
+                android:padding="5dp"
+                android:layout_toRightOf="@+id/player_score1"
+                android:text="Yusuf Ali"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/player_score3"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="1"
+                android:padding="5dp"
+
+                android:background="@color/off_white"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/player_name3"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/pale_green"
+                android:padding="5dp"
+                android:text="Yusuf Ali"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/player_score4"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="1"
+                android:padding="5dp"
+
+                android:background="@color/off_white"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/player_name4"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/pale_green"
+                android:padding="5dp"
+                android:text="Yusuf Ali"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView
+                android:id="@+id/player_score5"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="1"
+                android:padding="5dp"
+
+                android:background="@color/off_white"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/player_name5"
+
+                android:layout_weight="1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:background="@color/pale_green"
+                android:padding="5dp"
+                android:text="Yusuf Ali"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+    <TextView
+        android:id="@+id/player_score6"
+
+        android:layout_weight="1"
+        android:layout_width="70dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="1"
+        android:padding="5dp"
+
+        android:background="@color/off_white"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/player_name6"
+
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:background="@color/pale_green"
+android:padding="5dp"
+            android:text="Yusuf Ali"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
