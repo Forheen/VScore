@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<data>
 
+</data>
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -19,18 +21,18 @@
             android:orientation="vertical">
             <!-- First button -->
             <Button
+        android:id="@+id/btn_organizer"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:text="Organizer"
 
-                android:id="@+id/btn_organizer"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_button_blue"
-                android:padding="20dp"
-
-                android:text="Oragnizer"
-                android:textColor="@android:color/white"
-                android:textSize="20dp" />
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_blue"
+        android:layout_marginBottom="60dp"
+           />
 
             <!-- Second button -->
             <Button
