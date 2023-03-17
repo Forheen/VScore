@@ -6,4 +6,5 @@ object AppUrls {
     const val GET_CODE_URL="createRoom"
     const val TEAM_LOGIN_URL="loginTeam"
     const val TEAM_REGISTER_URL="registerTeam"
+    const val Check_URL="check"
 }

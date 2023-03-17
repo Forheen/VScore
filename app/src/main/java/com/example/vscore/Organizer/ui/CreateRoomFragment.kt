@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.vscore.Organizer.viewmodel.RoomViewModel
 import com.example.vscore.databinding.FragmentCreateRoomBinding
+import java.util.*
 
 class CreateRoomFragment : Fragment() {
     lateinit var binding:FragmentCreateRoomBinding
@@ -25,11 +27,30 @@ class CreateRoomFragment : Fragment() {
         binding = FragmentCreateRoomBinding.inflate(layoutInflater, container, false)
         viewModel= ViewModelProvider(this).get(RoomViewModel::class.java)
         observeCodeApiCall()
+        observeCheckApiCall()
         callCodeApi()
         initListener()
+        val timer = Timer()
+        val task = object : TimerTask() {
+            override fun run() {
+                callCheckApi()
+            }
+        }
+        timer.schedule(task, 0, 5000)
 
 
         return binding.root
+    }
+
+    private fun observeCheckApiCall() {
+        viewModel.checkResponseMutableLiveData.observe(viewLifecycleOwner, Observer {
+            binding.teamOne=it.team_no_1_name
+            binding.teamTwo=it.team_no_2_name
+            if(it.team_no_1_joined==1&&it.team_no_2_joined==1)
+            {
+                Toast.makeText(requireContext(),"WOW..all joined!",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun initListener() {
@@ -72,5 +93,10 @@ class CreateRoomFragment : Fragment() {
         val id =activity?.intent?.getStringExtra("org_id").toString()
         Log.d("Org_id",id)
         viewModel.callCodeApi(id)
+    }
+
+    private fun callCheckApi() {
+        var code=binding.codeTV.text.toString()
+        viewModel.callCheckApi(code)
     }
 }

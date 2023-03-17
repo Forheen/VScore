@@ -36,10 +36,10 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginResponseMutableLiveData.observe(this, Observer {
             val intent = if (PrefUtil(this).sharedPreferences?.getString(PrefUtil.ROLE, "") == "Organiser") {
                 Intent(this@LoginActivity, MainActivity::class.java)
+                intent.putExtra("org_id",it.Id.toString())
             } else {
                 Intent(this@LoginActivity, TeamMainActivity::class.java)
             }
-            intent.putExtra("org_id", it.Id)
             startActivity(intent)
             finish()
         })
@@ -69,10 +69,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeErrorMessage() {
         viewModel.errorMessage.observe(this, Observer {
-            val snack = Snackbar.make(binding.root, "${it}", Snackbar.LENGTH_SHORT)
-            snack.setBackgroundTint(resources.getColor(R.color.black))
-            snack.setTextColor(resources.getColor(R.color.white))
-            snack.show()
+            Toast.makeText(this,it.toString(),Toast.LENGTH_SHORT).show()
         })
     }
 }
