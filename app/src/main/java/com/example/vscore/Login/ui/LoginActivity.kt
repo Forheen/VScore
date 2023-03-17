@@ -22,6 +22,7 @@ import com.talen_titan.utility.PrefUtil
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
     lateinit var viewModel: LoginViewModel
+    var digit: Int?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,13 +36,10 @@ class LoginActivity : AppCompatActivity() {
     private fun observeLoginApi() {
         viewModel.loginResponseMutableLiveData.observe(this, Observer {
             val intent = if (PrefUtil(this).sharedPreferences?.getString(PrefUtil.ROLE, "") == "Organiser") {
-                Intent(this@LoginActivity, MainActivity::class.java)
-                intent.putExtra("org_id",it.Id.toString())
+
             } else {
-                Intent(this@LoginActivity, TeamMainActivity::class.java)
+                digit=1
             }
-            startActivity(intent)
-            finish()
         })
     }
 
@@ -59,12 +57,12 @@ class LoginActivity : AppCompatActivity() {
     private fun callLoginApi() {
         val email = binding.edtEmail.text.toString()
         val password = binding.edtPassword.text.toString()
-        val url = if (PrefUtil(applicationContext).sharedPreferences?.getString(PrefUtil.ROLE, "") == "Organiser") {
-            AppUrls.ORGANIZATION_LOGIN_URL
+        if (PrefUtil(applicationContext).sharedPreferences?.getString(PrefUtil.ROLE, "") == "Organiser") {
+            digit=0
         } else {
-            AppUrls.TEAM_LOGIN_URL
+            digit=1
         }
-        viewModel.callLoginApi(url, SignInRequestModel(email, password))
+        viewModel.callLoginApi(SignInRequestModel(email, password,digit))
     }
 
     private fun observeErrorMessage() {

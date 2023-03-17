@@ -20,8 +20,8 @@ class SignUpViewModel(): ViewModel() {
         this.registerResponseMutableLiveData = repository.signUpResponseMutableLiveData
     }
 
-    fun callRegisterApi(url:String,signUpRequestModel: SignUpRequestModel) {
-        repository.registerApiCall(url,signUpRequestModel)
+    fun callRegisterApi(signUpRequestModel: SignUpRequestModel) {
+        repository.registerApiCall(signUpRequestModel)
     }
 
 }

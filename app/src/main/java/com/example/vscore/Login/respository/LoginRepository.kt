@@ -18,8 +18,9 @@ class LoginRepository() {
     val errorMessage = MutableLiveData<String>()
     val signUpResponseMutableLiveData = MutableLiveData<SignUpResponseModel>()
 
-    fun loginApiCall(url:String,signInRequestModel: SignInRequestModel) {
+    fun loginApiCall(signInRequestModel: SignInRequestModel) {
         showProgress.value = true
+        val url=AppUrls.ORGANIZATION_LOGIN_URL
         val client = RetrofitUtil.getRetrofit()?.create(LoginService::class.java)
         var call = client?.loginApiCall(url, signInRequestModel)
         call?.enqueue(object : Callback<SignUpResponseModel?> {

@@ -18,8 +18,9 @@ class SignUpRepository() {
         val errorMessage = MutableLiveData<String>()
         val signUpResponseMutableLiveData = MutableLiveData<SignUpResponseModel>()
 
-        fun registerApiCall(url:String,signUpRequestModel: SignUpRequestModel) {
+        fun registerApiCall(signUpRequestModel: SignUpRequestModel) {
             showProgress.value = true
+            val url=AppUrls.ORGANIZATION_REGISTER_URL
             val client = RetrofitUtil.getRetrofit()?.create(SignUpService::class.java)
             var call = client?.registerApiCall(url, signUpRequestModel)
             call?.enqueue(object : Callback<SignUpResponseModel?> {

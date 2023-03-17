@@ -20,8 +20,8 @@ class LoginViewModel() : ViewModel() {
         this.loginResponseMutableLiveData = repository.signUpResponseMutableLiveData
     }
 
-    fun callLoginApi(url:String,signInRequestModel: SignInRequestModel) {
-        repository.loginApiCall(url,signInRequestModel)
+    fun callLoginApi(signInRequestModel: SignInRequestModel) {
+        repository.loginApiCall(signInRequestModel)
     }
 
 }

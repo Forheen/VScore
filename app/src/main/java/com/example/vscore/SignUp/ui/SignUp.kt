@@ -44,12 +44,12 @@ class SignUp : AppCompatActivity() {
         val name = binding.edtUsername.text.toString()
         val email = binding.edtEmail.text.toString()
         val password = binding.edtPassword.text.toString()
-        var url=""
-        url = if(PrefUtil(applicationContext).sharedPreferences?.getString(PrefUtil.ROLE, "")=="Organiser")
-            AppUrls.ORGANIZATION_REGISTER_URL
+        var digit=0
+        if(PrefUtil(applicationContext).sharedPreferences?.getString(PrefUtil.ROLE, "")=="Organiser")
+            digit=0
         else
-            AppUrls.TEAM_REGISTER_URL
-        viewModel.callRegisterApi(url,SignUpRequestModel(name, email, password))
+            digit=1
+        viewModel.callRegisterApi(SignUpRequestModel(name, email, password,digit))
     }
 
     private fun observeRegisterApiResponse() {
