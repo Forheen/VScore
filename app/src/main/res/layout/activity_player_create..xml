@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Player.ui.Create"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:background="@color/blue"
+        android:orientation="vertical">
+
+                <ImageView
+                    android:layout_gravity="center"
+
+                    android:id="@+id/img_volleyball"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo"
+
+                    />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/transparent_blue"
+
+        android:padding="25dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/white_unfilled_rectangle"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@drawable/white_unfilled_rectangle"
+                android:text="Player Registration" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_button_blue"
+                android:layout_marginTop="30dp"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <EditText
+
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:background="@color/white"
+
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:hint="Player Name" />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+
+                        android:minWidth="100dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="P. No" />
+                    <View
+                        android:layout_weight="1"
+                        android:minWidth="10dp"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="10dp"/>
+                    <EditText
+
+                        android:minWidth="100dp"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:background="@color/white"
+
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:text="40" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/createBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/button_back"
+            android:paddingHorizontal="90dp"
+            android:text="R e g i s t e r"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
