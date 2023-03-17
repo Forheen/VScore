@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.vscore.Organizer.ui.CreateRoomFragment
 import com.example.vscore.Organizer.ui.OrganizerHomeFragment
+import com.example.vscore.Organizer.ui.OrganizerProfileFragment
 import com.example.vscore.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private val home = OrganizerHomeFragment()
     private val createMatch = CreateRoomFragment()
-    private val profile = OrganizerHomeFragment()
+    private val profile = OrganizerProfileFragment()
     private var activeFragment: Fragment = home
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -10,6 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.vscore.Team.ui.JoinRoomFragment
 import com.example.vscore.Team.ui.TeamHomeFragment
+import com.example.vscore.Team.ui.TeamProfileFragment
 import com.example.vscore.databinding.ActivityTeamMainBinding
 
 class TeamMainActivity : AppCompatActivity() {
@@ -20,14 +21,14 @@ class TeamMainActivity : AppCompatActivity() {
 
     private val home = TeamHomeFragment()
     private val createMatch = JoinRoomFragment()
-    private val profile = TeamHomeFragment()
+    private val profile = TeamProfileFragment()
     private var activeFragment: Fragment = home
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_team_main)
 
-        navController = Navigation.findNavController(this, R.id.fragment_container)
+        navController = Navigation.findNavController(this, R.id.fragment_container1)
         addFragments()
         showSelectedFragmentListener()
         binding.bottomNavigation.setupWithNavController(navController)
@@ -39,9 +40,9 @@ class TeamMainActivity : AppCompatActivity() {
 
     private fun addFragments() {
         fragmentManager.beginTransaction().apply {
-            add(R.id.fragment_container, home, "home")
-            add(R.id.fragment_container, createMatch, "create").hide(createMatch)
-            add(R.id.fragment_container, profile, "profile").hide(profile)
+            add(R.id.fragment_container1, home, "home")
+            add(R.id.fragment_container1, createMatch, "create").hide(createMatch)
+            add(R.id.fragment_container1, profile, "profile").hide(profile)
         }.commit()
     }
 

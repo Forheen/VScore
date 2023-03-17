@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.vscore.Team.ui.TeamHomeFragment"
+        android:name="com.example.vscore.Team.ui.TeamProfileFragment"
         android:label="profile"
-        tools:layout="@layout/fragment_organizer_home" />
+        tools:layout="@layout/fragment_team_profile" />
 </navigation>

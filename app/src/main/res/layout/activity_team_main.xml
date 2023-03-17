@@ -13,7 +13,7 @@
         tools:context=".TeamMainActivity">
 
         <fragment
-            android:id="@+id/fragment_container"
+            android:id="@+id/fragment_container1"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

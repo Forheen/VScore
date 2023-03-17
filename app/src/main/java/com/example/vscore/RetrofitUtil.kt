@@ -9,7 +9,7 @@ class RetrofitUtil {
     companion object {
         private lateinit var retrofit: Retrofit
 
-        val API_BASE_URL_PROD = "http://192.168.43.20:4000/api/v1/"
+        val API_BASE_URL_PROD = "http://192.168.65.103:4000/api/v1/"
 
 
         fun getRetrofit(token: String? = null): Retrofit {
