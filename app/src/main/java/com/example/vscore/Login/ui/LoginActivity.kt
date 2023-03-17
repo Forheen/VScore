@@ -35,10 +35,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeLoginApi() {
         viewModel.loginResponseMutableLiveData.observe(this, Observer {
-            val intent = if (PrefUtil(this).sharedPreferences?.getString(PrefUtil.ROLE, "") == "Organiser") {
-
-            } else {
-                digit=1
+            if(it.role.toString()=="Organiser") {
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                intent.putExtra("org_id",it.Id.toString())
+                startActivity(intent)
+            }
+            else
+            {
+                val intent = Intent(this@LoginActivity, TeamMainActivity::class.java)
+                startActivity(intent)
             }
         })
     }
