@@ -3,6 +3,7 @@ package com.example.vscore.SignUp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.content.ContentProviderCompat
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
@@ -25,6 +26,7 @@ class SignUp : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
         initListener()
         observeRegisterApiResponse()
+        observeErrorMessage()
     }
 
     private fun initListener() {
@@ -55,6 +57,12 @@ class SignUp : AppCompatActivity() {
             val intent = Intent(this@SignUp, LoginActivity::class.java)
             startActivity(intent)
             finish()
+        })
+    }
+
+    private fun observeErrorMessage() {
+        viewModel.errorMessage.observe(this, Observer {
+            Toast.makeText(this,it.toString(), Toast.LENGTH_SHORT).show()
         })
     }
 }
