@@ -6,19 +6,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.vscore.Organizer.ui.OrganizerHomeFragment"
+        android:name="com.example.vscore.Team.ui.TeamHomeFragment"
         android:label="home"
         tools:layout="@layout/fragment_organizer_home" />
 
     <fragment
         android:id="@+id/navigation_room"
-        android:name="com.example.vscore.Organizer.ui.CreateRoomFragment"
+        android:name="com.example.vscore.Team.ui.JoinRoomFragment"
         android:label="room"
         tools:layout="@layout/fragment_create_room" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.vscore.Organizer.ui.OrganizerHomeFragment"
+        android:name="com.example.vscore.Team.ui.TeamHomeFragment"
         android:label="profile"
         tools:layout="@layout/fragment_organizer_home" />
 </navigation>

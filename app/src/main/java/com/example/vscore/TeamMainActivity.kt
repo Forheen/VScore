@@ -8,24 +8,24 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.vscore.Organizer.ui.CreateRoomFragment
-import com.example.vscore.Organizer.ui.OrganizerHomeFragment
-import com.example.vscore.databinding.ActivityMainBinding
+import com.example.vscore.Team.ui.JoinRoomFragment
+import com.example.vscore.Team.ui.TeamHomeFragment
+import com.example.vscore.databinding.ActivityTeamMainBinding
 
-class MainActivity : AppCompatActivity() {
+class TeamMainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
     private val fragmentManager = supportFragmentManager
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityTeamMainBinding
 
-    private val home = OrganizerHomeFragment()
-    private val createMatch = CreateRoomFragment()
-    private val profile = OrganizerHomeFragment()
+    private val home = TeamHomeFragment()
+    private val createMatch = JoinRoomFragment()
+    private val profile = TeamHomeFragment()
     private var activeFragment: Fragment = home
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_team_main)
 
         navController = Navigation.findNavController(this, R.id.fragment_container)
         addFragments()

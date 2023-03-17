@@ -2,189 +2,205 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<data></data>
+
+    <data>
+        <variable
+            name="code"
+            type="String" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Organizer.ui.Dashboard"
-    android:background="@color/white"
-    android:orientation="vertical">
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".Organizer.ui.Dashboard">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-android:background="@color/blue"
-        android:orientation="vertical">
-
-                <ImageView
-                    android:layout_gravity="center"
-
-                    android:id="@+id/img_volleyball"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/logo"
-
-                    />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:background="@color/transparent_blue"
-
-        android:padding="25dp"
-        android:orientation="vertical">
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:padding="10dp"
-            android:gravity="center"
-
-            android:textColor="@color/white"
-            android:background="@drawable/white_unfilled_rounded"
-            android:textFontWeight="800"
-            android:text="C r e a t e   y o u r   R o o m" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="10dp"
-android:background="@drawable/white_unfilled_rounded"
-            android:padding="10dp"
+            android:background="@color/blue"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:orientation="horizontal">
-                <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:padding="10dp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textFontWeight="800"
-                    android:text="Room code" />
-                <TextView
-
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="12dp"
-                    android:background="@drawable/white_unfilled_rectangle"
-
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:text="5 4 3 2" />
-              </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/white_unfilled_rounded"
-                android:padding="5dp"
-                android:orientation="horizontal">
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:padding="10dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textFontWeight="800"
-                android:text="Share this code" />
-                <ImageView
-                    android:layout_gravity="center"
-
-                    android:id="@+id/img_share"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:padding="5dp"
-
-                    android:src="@drawable/share"
-
-                    />
-                <ImageView
-                    android:layout_gravity="center"
-
-                    android:id="@+id/img_whatsapp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:padding="5dp"
-                    android:src="@drawable/whatsapp"
-
-                    />
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/img_volleyball"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"/>
         </LinearLayout>
 
-        <ImageView
-                android:layout_gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent_blue"
 
-                android:id="@+id/img_team1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logo"
+            android:orientation="vertical"
+            android:padding="25dp">
 
-                />
             <TextView
 
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:background="@drawable/white_unfilled_rectangle"
-android:layout_gravity="center"
+                android:background="@drawable/white_unfilled_rounded"
                 android:gravity="center"
+                android:padding="10dp"
+
+                android:text="C r e a t e   y o u r   R o o m"
                 android:textColor="@color/white"
-                android:text="Team 1" />
+                android:textFontWeight="800"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/white_unfilled_rounded"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Room code"
+                        android:textColor="@color/white"
+                        android:textFontWeight="800"
+                        android:textSize="16sp" />
+
+                    <TextView
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/white_unfilled_rectangle"
+                        android:gravity="center"
+                        android:padding="12dp"
+
+                        android:text="@{code}"
+                        android:hint="code"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_unfilled_rounded"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Share this code"
+                        android:textColor="@color/white"
+                        android:textFontWeight="800"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/img_share"
+
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+
+                        android:src="@drawable/share"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_whatsapp"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/whatsapp"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
             <ImageView
-                android:layout_gravity="center"
+                android:id="@+id/img_team1"
 
-                android:id="@+id/img_team2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:src="@drawable/logo"
 
                 />
+
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"
-                android:background="@drawable/white_unfilled_rectangle"
                 android:layout_gravity="center"
-
+                android:background="@drawable/white_unfilled_rectangle"
                 android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:text="Team 1"
                 android:textColor="@color/white"
-                android:text="Team 2" />
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_team2"
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"
+
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/white_unfilled_rectangle"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+
+                android:text="Team 2"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
             <TextView
                 android:id="@+id/createBtn"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
 
                 android:background="@drawable/button_back"
+                android:gravity="center"
                 android:paddingHorizontal="10dp"
-                android:text="Create"
+                android:text="Enter"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:gravity="center" />
-    </LinearLayout>
+                android:textSize="16sp" />
+        </LinearLayout>
 
     </LinearLayout>
 </layout>

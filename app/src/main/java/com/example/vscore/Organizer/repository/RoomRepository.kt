@@ -1,38 +1,38 @@
-package com.example.vscore.Login.respository
+package com.example.vscore.Organizer.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.example.vscore.AppUrls
 import com.example.vscore.Login.model.SignInRequestModel
 import com.example.vscore.Login.network.LoginService
+import com.example.vscore.MainActivity
+import com.example.vscore.Organizer.model.CodeResponseModel
+import com.example.vscore.Organizer.network.MainActivityService
 import com.example.vscore.RetrofitUtil
-import com.example.vscore.SignUp.model.SignUpRequestModel
-import com.example.vscore.SignUp.model.SignUpResponseModel
-import com.example.vscore.SignUp.network.SignUpService
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginRepository() {
+class RoomRepository() {
     val showProgress = MutableLiveData<Boolean>()
     val errorMessage = MutableLiveData<String>()
-    val signUpResponseMutableLiveData = MutableLiveData<SignUpResponseModel>()
+    val codeResponseMutableLiveData = MutableLiveData<CodeResponseModel>()
 
-    fun loginApiCall(url:String,signInRequestModel: SignInRequestModel) {
+    fun codeApiCall(id: String?) {
         showProgress.value = true
-        val client = RetrofitUtil.getRetrofit()?.create(LoginService::class.java)
-        var call = client?.loginApiCall(url, signInRequestModel)
-        call?.enqueue(object : Callback<SignUpResponseModel?> {
+        val client = RetrofitUtil.getRetrofit()?.create(MainActivityService::class.java)
+        var call = client?.getRoomCode(AppUrls.GET_CODE_URL+"/$id")
+        call?.enqueue(object : Callback<CodeResponseModel?> {
             override fun onResponse(
-                call: Call<SignUpResponseModel?>,
-                response: Response<SignUpResponseModel?>
+                call: Call<CodeResponseModel?>,
+                response: Response<CodeResponseModel?>
             ) {
                 showProgress.postValue(false)
                 val body = response.body()
 
                 if (response.isSuccessful) {
                     body?.let {
-                        signUpResponseMutableLiveData.postValue(body)
+                        codeResponseMutableLiveData.postValue(body)
                     }
                 } else {
                     val jObjError = JSONObject(response.errorBody()?.string())
@@ -40,11 +40,10 @@ class LoginRepository() {
                 }
             }
 
-            override fun onFailure(call: Call<SignUpResponseModel?>, t: Throwable) {
+            override fun onFailure(call: Call<CodeResponseModel?>, t: Throwable) {
                 showProgress.postValue(false)
                 errorMessage.postValue("Server error please try after sometime")
             }
         })
     }
-
 }

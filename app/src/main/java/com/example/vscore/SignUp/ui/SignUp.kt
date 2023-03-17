@@ -3,9 +3,12 @@ package com.example.vscore.SignUp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContentProviderCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.vscore.AppUrls
 import com.example.vscore.Login.ui.LoginActivity
 import com.example.vscore.R
 import com.example.vscore.SignUp.model.SignUpRequestModel
@@ -39,7 +42,12 @@ class SignUp : AppCompatActivity() {
         val name = binding.edtUsername.text.toString()
         val email = binding.edtEmail.text.toString()
         val password = binding.edtPassword.text.toString()
-        viewModel.callRegisterApi(SignUpRequestModel(name, email, password))
+        var url=""
+        url = if(PrefUtil(applicationContext).sharedPreferences?.getString(PrefUtil.ROLE, "")=="Organiser")
+            AppUrls.ORGANIZATION_REGISTER_URL
+        else
+            AppUrls.TEAM_REGISTER_URL
+        viewModel.callRegisterApi(url,SignUpRequestModel(name, email, password))
     }
 
     private fun observeRegisterApiResponse() {

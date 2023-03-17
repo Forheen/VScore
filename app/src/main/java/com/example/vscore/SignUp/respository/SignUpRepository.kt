@@ -1,11 +1,13 @@
 package com.example.vscore.SignUp.respository
 
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.MutableLiveData
 import com.example.vscore.AppUrls
 import com.example.vscore.RetrofitUtil
 import com.example.vscore.SignUp.model.SignUpRequestModel
 import com.example.vscore.SignUp.model.SignUpResponseModel
 import com.example.vscore.SignUp.network.SignUpService
+import com.talen_titan.utility.PrefUtil
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,10 +18,10 @@ class SignUpRepository() {
         val errorMessage = MutableLiveData<String>()
         val signUpResponseMutableLiveData = MutableLiveData<SignUpResponseModel>()
 
-        fun registerApiCall(signUpRequestModel: SignUpRequestModel) {
+        fun registerApiCall(url:String,signUpRequestModel: SignUpRequestModel) {
             showProgress.value = true
             val client = RetrofitUtil.getRetrofit()?.create(SignUpService::class.java)
-            var call = client?.registerApiCall(AppUrls.ORGANIZATION_REGISTER_URL, signUpRequestModel)
+            var call = client?.registerApiCall(url, signUpRequestModel)
             call?.enqueue(object : Callback<SignUpResponseModel?> {
                 override fun onResponse(
                     call: Call<SignUpResponseModel?>,

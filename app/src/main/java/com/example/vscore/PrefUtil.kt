@@ -28,9 +28,7 @@ class PrefUtil(context: Context) {
     fun removeSavedValue(){
         val edit= sharedPreferences?.edit()
         edit?.remove(IS_LOGIN)
-        edit?.remove(TOKEN)
         edit?.remove(ID)
-        edit?.remove(SESSION)
         edit?.remove(USERNAME)
         edit?.commit()
     }
